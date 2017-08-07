@@ -2,8 +2,8 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="horizontal"
     tools:context="space.thealbre.itplace2.MainActivity">
 
@@ -12,33 +12,21 @@
        android:layout_height="fill_parent"
        android:orientation="vertical">
 
-      <LinearLayout
-          android:id="@+id/linearLayout"
-          android:layout_width="384dp"
-          android:layout_height="459dp"
-          android:layout_weight="1"
-          android:orientation="vertical"
-          android:background="#c6c9ce"
-          tools:layout_editor_absoluteX="1dp"
-          tools:layout_editor_absoluteY="1dp">
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="397dp"
+          android:layout_weight="0.07">
 
          <ImageView
              android:id="@+id/imageView"
              android:layout_width="match_parent"
-             android:layout_height="wrap_content"
+             android:layout_height="150dp"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentStart="true"
+             android:layout_alignParentTop="true"
              android:layout_weight="1"
              android:gravity="center_horizontal"
              app:srcCompat="@mipmap/ic_launcher" />
-
-         <TextView
-             android:id="@+id/textView3"
-             android:layout_width="fill_parent"
-             android:layout_height="40dp"
-             android:gravity="center_horizontal"
-             android:text="Queen Elizabeth II"
-             android:textSize="25sp"
-             tools:layout_editor_absoluteX="0dp"
-             tools:layout_editor_absoluteY="8dp" />
 
          <TextView
              android:id="@+id/textView"
@@ -46,49 +34,74 @@
              android:layout_height="70dp"
              android:layout_weight="1"
              android:gravity="center_horizontal"
+             android:isScrollContainer="true"
              android:text="@string/text"
              tools:layout_editor_absoluteX="113dp"
              tools:layout_editor_absoluteY="177dp"
-             android:isScrollContainer="true"/>
-   </LinearLayout>
+             android:layout_below="@+id/textView3"
+             android:layout_alignParentStart="true"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentEnd="true" />
 
-
-      <LinearLayout
-          android:layout_width="379dp"
-          android:layout_height="48dp"
-          android:layout_weight="1"
-          android:gravity="end"
-          android:orientation="horizontal"
-          tools:layout_editor_absoluteX="3dp"
-          tools:layout_editor_absoluteY="463dp">
-
-         <Button
-             android:id="@+id/button"
-             android:layout_width="80dp"
-             android:layout_height="fill_parent"
-             android:background="#4eac01"
-             android:text="green"
-             tools:layout_editor_absoluteX="0dp"
-             tools:layout_editor_absoluteY="465dp" />
-
-         <Button
-             android:id="@+id/button2"
-             android:layout_width="60dp"
-             android:layout_height="fill_parent"
-             android:background="#ffcbc8"
-             android:text="pink"
-             tools:layout_editor_absoluteX="88dp"
-             tools:layout_editor_absoluteY="465dp" />
-
-         <Button
-             android:id="@+id/button3"
+         <TextView
+             android:id="@+id/textView3"
              android:layout_width="fill_parent"
-             android:layout_height="fill_parent"
-             android:background="#c6c9ce"
-             android:text="gray"
-             tools:layout_editor_absoluteX="176dp"
-             tools:layout_editor_absoluteY="465dp" />
+             android:layout_height="40dp"
+             android:layout_alignParentStart="true"
+             android:layout_below="@+id/imageView"
+             android:layout_marginTop="11dp"
+             android:gravity="center_horizontal"
+             android:text="Queen Elizabeth II"
+             android:textSize="25sp"
+             tools:layout_editor_absoluteX="0dp"
+             tools:layout_editor_absoluteY="8dp" />
 
-      </LinearLayout>
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="20dp"
+          android:layout_weight="0.02"
+          android:layout_alignParentBottom="true">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#4eac01"
+                android:text="green"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="465dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#c6c9ce"
+                android:text="gray"
+                tools:layout_editor_absoluteX="176dp"
+                tools:layout_editor_absoluteY="465dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#ffcbc8"
+                android:text="pink"
+                tools:layout_editor_absoluteX="88dp"
+                tools:layout_editor_absoluteY="465dp" />
+         </LinearLayout>
+      </RelativeLayout>
+
+
    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
