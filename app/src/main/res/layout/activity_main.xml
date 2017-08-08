@@ -15,33 +15,45 @@
       <RelativeLayout
           android:layout_width="wrap_content"
           android:layout_height="397dp"
-          android:layout_weight="0.07">
+          android:layout_weight="0.07"
+
+          android:background="@color/background">
 
          <ImageView
              android:id="@+id/imageView"
              android:layout_width="match_parent"
              android:layout_height="150dp"
-             android:layout_alignParentEnd="true"
              android:layout_alignParentStart="true"
              android:layout_alignParentTop="true"
-             android:layout_weight="1"
              android:gravity="center_horizontal"
-             app:srcCompat="@drawable/queen" />
+             app:srcCompat="@drawable/queen"
+             android:contentDescription="@string/content_description_queen"/>
+
+
+         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id="@+id/scroll"
+         android:layout_width="fill_parent"
+         android:layout_height="70dp"
+             android:layout_below="@+id/textView3"
+             android:layout_alignParentStart="true"
+             android:layout_alignParentBottom="true"
+             android:gravity="fill_horizontal">
+
 
          <TextView
              android:id="@+id/textView"
              android:layout_width="fill_parent"
              android:layout_height="70dp"
-             android:layout_weight="1"
-             android:gravity="center_horizontal"
+             android:gravity="fill_horizontal"
              android:isScrollContainer="true"
              android:text="@string/text"
+             android:layout_marginLeft="7dp"
+             android:layout_marginRight="7dp"
              tools:layout_editor_absoluteX="113dp"
-             tools:layout_editor_absoluteY="177dp"
-             android:layout_below="@+id/textView3"
-             android:layout_alignParentStart="true"
-             android:layout_alignParentBottom="true"
-             android:layout_alignParentEnd="true" />
+             tools:layout_editor_absoluteY="177dp" />
+
+
+         </ScrollView>
 
          <TextView
              android:id="@+id/textView3"
@@ -51,7 +63,7 @@
              android:layout_below="@+id/imageView"
              android:layout_marginTop="11dp"
              android:gravity="center_horizontal"
-             android:text="Queen Elizabeth II"
+             android:text="@string/header"
              android:textSize="25sp"
              tools:layout_editor_absoluteX="0dp"
              tools:layout_editor_absoluteY="8dp" />
@@ -61,32 +73,30 @@
       <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="20dp"
-          android:layout_weight="0.02"
-          android:layout_alignParentBottom="true">
+          android:layout_weight="0.02">
 
          <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:layout_weight="1"
              android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:background="#4eac01"
-                android:text="green"
+                android:layout_weight="2"
+                android:text="@string/button_green"
                 tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="465dp" />
+                tools:layout_editor_absoluteY="465dp"
+                android:background="#4eac01"/>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:background="#c6c9ce"
-                android:text="gray"
+                android:text="@string/button_gray"
                 tools:layout_editor_absoluteX="176dp"
                 tools:layout_editor_absoluteY="465dp" />
 
@@ -94,9 +104,9 @@
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1"
+                android:layout_weight="4"
                 android:background="#ffcbc8"
-                android:text="pink"
+                android:text="@string/button_pink"
                 tools:layout_editor_absoluteX="88dp"
                 tools:layout_editor_absoluteY="465dp" />
          </LinearLayout>
