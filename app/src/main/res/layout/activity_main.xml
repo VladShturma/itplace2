@@ -13,6 +13,7 @@
        android:orientation="vertical">
 
       <RelativeLayout
+          android:id="@+id/textZone"
           android:layout_width="wrap_content"
           android:layout_height="0dp"
           android:background="@color/background"
@@ -80,7 +81,8 @@
                 android:text="@string/button_green"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="465dp"
-                android:background="#4eac01"/>
+                android:background="#4eac01"
+                android:onClick="greenOnClick"/>
 
             <Button
                 android:id="@+id/button3"
@@ -90,7 +92,8 @@
                 android:background="#c6c9ce"
                 android:text="@string/button_gray"
                 tools:layout_editor_absoluteX="176dp"
-                tools:layout_editor_absoluteY="465dp" />
+                tools:layout_editor_absoluteY="465dp"
+                android:onClick="grayOnClick"/>
 
             <Button
                 android:id="@+id/button2"
@@ -100,7 +103,8 @@
                 android:background="#ffcbc8"
                 android:text="@string/button_pink"
                 tools:layout_editor_absoluteX="88dp"
-                tools:layout_editor_absoluteY="465dp" />
+                tools:layout_editor_absoluteY="465dp"
+                android:onClick="pinkOnClick"/>
          </LinearLayout>
       </RelativeLayout>
 
