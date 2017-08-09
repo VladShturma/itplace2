@@ -1,5 +1,6 @@
 package space.thealbre.itplace2;
 
+// неиспользуемые импорты
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -20,10 +21,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+//     название переменной не соответствует ее типу
     private RelativeLayout mConstraintLayout;
 
+//     чтобы не писать одну и ту же логику в трех методах, лучше сделать общий метод changeColor,
+//     который принимает в качестве параметров строку для Toast и идентификатор цвета
+//     а в этих трех методах уже вызывать общий с нужными параметрами
     public void greenOnClick(View view) {
         Toast.makeText(this, "You choose the green color", Toast.LENGTH_LONG).show();
+//         mConstraintLayout лучше один раз определить в методе onCreate
         mConstraintLayout = (RelativeLayout) findViewById(R.id.textZone);
         mConstraintLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.greenBackground));
     }
