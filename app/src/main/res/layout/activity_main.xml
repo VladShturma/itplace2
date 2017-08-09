@@ -13,6 +13,7 @@
        android:layout_height="fill_parent"
        android:orientation="vertical">
 
+<!--        этот RelativeLaout не нужен. Высоту через weight можно было задать напрямую у ScrollView -->
        <RelativeLayout
           android:id="@+id/textZone"
           android:layout_width="wrap_content"
